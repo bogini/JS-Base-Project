@@ -1,0 +1,32 @@
+{
+  "name": "JS-Base-Project",
+  "version": "1.0.0",
+  "description": "Base project with Mocha, Chai, Babel7, ES6 and ESLint",
+  "main": "index.js",
+  "author": "Iñigo Beitia",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "nodemon --exec babel-node ./src/index.js",
+    "test": "./node_modules/.bin/mocha --require @babel/register",
+    "test:watch": "yarn run test --watch",
+    "build": "babel src --out-dir ./dist --source-maps",
+    "serve": "node ./dist/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "undefined": "^0.1.0"
+  }
+}
